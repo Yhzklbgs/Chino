@@ -1,0 +1,8 @@
+
+[ Kamis, 27 - 12 - 2018 | 15:14:54 ] Expecting value: line 1 column 1 (char 0)
+[ Kamis, 27 - 12 - 2018 | 15:15:10 ] Expecting value: line 1 column 1 (char 0)
+[ Kamis, 27 - 12 - 2018 | 15:58:02 ] Expecting value: line 1 column 1 (char 0)
+[ Jumat, 28 - 12 - 2018 | 13:10:54 ] 'bool' object is not subscriptable
+[ Jumat, 28 - 12 - 2018 | 13:11:02 ] 'bool' object is not subscriptable
+[ Jumat, 28 - 12 - 2018 | 13:13:49 ] 'bool' object is not subscriptable
+[ Jumat, 28 - 12 - 2018 | 13:13:56 ] 'bool' object is not subscriptable
