@@ -20,7 +20,7 @@ from pathlib import Path
 _session = requests.session()
 
 chino = LINE() #Login QR
-chino = LINE("Your Token") #Login Token
+#chino = LINE("Your Token") #Login Token
 chinoMid = chino.profile.mid
 chinoProfile = chino.getProfile()
 chinoProfile = chino.profile
@@ -490,7 +490,7 @@ def sendMention(to, text="", mids=[]):
         arrData = {'S':str(slen), 'E':str(elen - 4), 'M':mids[0]}
         arr.append(arrData)
         textx += mention + str(text)
-    chino.sendReplyMessage(msg.id, to, textx, {'MENTION': str('{"MENTIONEES":' + json.dumps(arr) + '}')}, 0)
+    chino.sendMessage(to, textx, {'MENTION': str('{"MENTIONEES":' + json.dumps(arr) + '}')}, 0)
 
 def bagasMention(to, text="",ps='', mids=[]):
     arrData = ""
@@ -1127,7 +1127,7 @@ def chinoBot(op):
                             if cmd == "help":
                                 mid = "u085311ecd9e3e3d74ae4c9f5437cbcb5"
                                 helpMessage = helpmessage()
-                                chino.sendReplyMention(msg.id, to, helpMessage, [sender, mid])                                                         
+                                sendMention(to, helpMessage, [sender, mid])                                                         
                              
                             elif cmd == "settings":
                                 helpSettings = helpsettings()                                
@@ -1250,7 +1250,7 @@ def chinoBot(op):
                                     ret_ += "\n├ ⌬ All My Teacher (Nadya, Dzin, Corry, Nazri, Zero, Alin, Tan)"
                                     ret_ += "\n├ ⌬ All People Beside Me "
                                     ret_ += "\n╰───[ Finish ]"
-                                    chino.sendReplyMention(msg.id, to, ret_, [chinoMid, bagas, dolphin])
+                                    sendMention(to, ret_, [chinoMid, bagas, dolphin])
                                 except Exception as error:
                                     	chino.sendReplyMessage(msg.id, to, str(error))
 
