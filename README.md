@@ -1,2 +1,3 @@
 # Chino
-Original as you see
+UPLOAD NEW LIB ZIP FILE 
+UPLOAD FIX SCRIPT WITH EMAIL LOGIN
